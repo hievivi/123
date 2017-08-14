@@ -1,0 +1,16 @@
+import math
+print("Enter the coefficients of the form ax^5 + bx^4 + cx^3 + dx^2 + ex + f")
+lst=[]
+for i in range(0,6):
+    a=int(input("Enter coefficient:"))
+    lst.append(a)
+x=int(input("Enter the value of x:"))
+sum1=0
+j=5
+for i in range(0,5):
+    while(j>0):
+        sum1=sum1+(lst[i]*math.pow(x,j))
+        break
+    j=j-1
+sum1=sum1+lst[5]
+print("The value of the polynomial is:",sum1)
